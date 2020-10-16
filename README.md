@@ -9,8 +9,8 @@
 status](https://travis-ci.com/rsizem2/example-rpackage-fars.svg?branch=master)](https://travis-ci.com/rsizem2/example-rpackage-fars)
 <!-- badges: end -->
 
-The `fars` package provides four R functions for analyzing vehicle crash
-data. The original code was provided as part of the *Building R
+The `fars` package provides several functions for analyzing vehicle
+crash data. The original code was provided as part of the *Building R
 Packages* course on Coursera. This original code was been edited to
 avoid using some deprecated functions and provide more cross-platform
 functionality.
