@@ -7,9 +7,9 @@
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{\code{state.num}}{An integer or object coercible into an integer, raises an error if state number not found in data}
+\item{state.num}{An integer or object coercible into an integer, raises an error if state number not found in data}
 
-\item{\code{year}}{An integer or object coercible into an integer}
+\item{year}{An integer or object coercible into an integer}
 }
 \description{
 For each state, the accident data is plotted as a point by it's latitude and longitude within the state's borders.

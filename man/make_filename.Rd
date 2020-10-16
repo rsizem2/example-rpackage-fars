@@ -7,7 +7,7 @@
 make_filename(year)
 }
 \arguments{
-\item{\code{year}}{integer or object coercible into an integer}
+\item{year}{An integer or object coercible into an integer.}
 }
 \value{
 vector A character vector to be used as a filename

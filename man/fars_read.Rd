@@ -7,7 +7,7 @@
 fars_read(filename)
 }
 \arguments{
-\item{\code{filename}}{A character string specifying the file from which we want to import data.}
+\item{filename}{A character string specifying the file from which we want to import data.}
 }
 \value{
 dataframe A dataframe with the contents specified by the filename, if no such file exists, function will raise an error

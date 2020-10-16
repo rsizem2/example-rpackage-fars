@@ -2,7 +2,7 @@
 #'
 #' Helper function for loading FARS data into a dataframe.
 #'
-#' @param \code{filename} A character string specifying the file from which we want to import data.
+#' @param filename A character string specifying the file from which we want to import data.
 #'
 #' @return dataframe A dataframe with the contents specified by the filename, if no such file exists, function will raise an error
 #'
@@ -27,7 +27,7 @@ fars_read <- function(filename) {
 #'
 #' Helper function that generates a filename string for loading in the FARS data.
 #'
-#' @param \code{year} integer or object coercible into an integer
+#' @param year An integer or object coercible into an integer.
 #'
 #' @return vector A character vector to be used as a filename
 #'
@@ -45,9 +45,9 @@ make_filename <- function(year) {
 #'
 #' A helper function which for each given year creates a dataframe with the month and year columns from the original data
 #'
-#' @param \code{years} A vector or list of strings, or objects coercible into integers representing years
+#' @param years A vector or list of strings, or objects coercible into integers representing years.
 #'
-#' @return list A list of dataframes, raises an error if invalid year given
+#' @return list A list of dataframes, raises an error if invalid year given.
 #'
 #' @examples
 #' \dontrun{fars_read_years(c('2013'))}
@@ -76,7 +76,7 @@ fars_read_years <- function(years) {
 #'
 #' Creates a dataframe using the FARS data with a column for each year and a row for each month with the number of accidents in that month.
 #'
-#' @param \code{years} A vector or list of strings, or objects coercible into integers representing years
+#' @param years A vector or list of strings, or objects coercible into integers representing years.
 #'
 #' @return dataframe A dataframe with a column for each year
 #'
@@ -102,9 +102,8 @@ fars_summarize_years <- function(years) {
 #'
 #' For each state, the accident data is plotted as a point by it's latitude and longitude within the state's borders.
 #'
-#' @param \code{state.num} An integer or object coercible into an integer, raises an error if state number not found in data
-#'
-#' @param \code{year} An integer or object coercible into an integer
+#' @param state.num An integer or object coercible into an integer, raises an error if state number not found in data
+#' @param year An integer or object coercible into an integer
 #'
 #' @return NULL
 #'

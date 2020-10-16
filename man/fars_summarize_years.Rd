@@ -7,7 +7,7 @@
 fars_summarize_years(years)
 }
 \arguments{
-\item{\code{years}}{A vector or list of strings, or objects coercible into integers representing years}
+\item{years}{A vector or list of strings, or objects coercible into integers representing years.}
 }
 \value{
 dataframe A dataframe with a column for each year

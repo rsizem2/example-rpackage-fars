@@ -7,10 +7,10 @@
 fars_read_years(years)
 }
 \arguments{
-\item{\code{years}}{A vector or list of strings, or objects coercible into integers representing years}
+\item{years}{A vector or list of strings, or objects coercible into integers representing years.}
 }
 \value{
-list A list of dataframes, raises an error if invalid year given
+list A list of dataframes, raises an error if invalid year given.
 }
 \description{
 A helper function which for each given year creates a dataframe with the month and year columns from the original data
