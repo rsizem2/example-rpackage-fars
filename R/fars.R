@@ -10,7 +10,7 @@
 #' \dontrun{fars_read('data.csv')}
 #'
 #' @importFrom readr read_csv
-#' @importFrom dplyr tbl_df
+#' @importFrom tibble as_tibble
 #'
 #' @export
 
@@ -20,7 +20,7 @@ fars_read <- function(filename) {
         data <- suppressMessages({
                 readr::read_csv(filename, progress = FALSE)
         })
-        dplyr::tbl_df(data)
+        tibble::as_tibble(data)
 }
 
 #' Returns a valid filename from a given year
