@@ -17,17 +17,17 @@ library(magrittr)
 load_all()
 ```
 
-# fars
+# README
 
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.com/rsizem2/example-rpackage-fars.svg?branch=master)](https://travis-ci.com/rsizem2/example-rpackage-fars)
 <!-- badges: end -->
 
-The `fars` package consists of sample R code for analyzing vehicle crash data. The code was provided as part of the *Building R Packages* course on Cousera. 
+The `fars` package provides four R functions for analyzing vehicle crash data. The original code was provided as part of the *Building R Packages* course on Coursera. This original code was been edited to avoid using some deprecated functions and provide more cross-platform functionality.
 
 ## The FARS datasets
 
-Describe FARS data...
+The FARS data comes from the US National Highway Traffic Safety Administration's [Fatality Analysis Reporting System](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars), which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. The data for the years 2013, 2014 and 2015 are included with this package in the `extdata` directory.
 
 ## Installation
 
