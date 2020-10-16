@@ -17,7 +17,8 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-Imports: 
+Imports:
+    devtools,
     tidyr,
     magrittr,
     dplyr,
