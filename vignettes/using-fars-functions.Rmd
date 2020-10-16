@@ -1,0 +1,46 @@
+---
+title: "How to Use FARS functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to Use FARS functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(devtools)
+library(magrittr)
+load_all()
+```
+
+## Introduction
+
+The `fars` package consists of two main functions: `fars_summarize_years` and `fars_map_state`. The `fars_summarize_years` function generates a summary datatable which tabulates the number of accidents by state. The `fars_map_state` function generates a visualization of the accidents on a map of each state. Included in the fars packages is accident data for the years 2013, 2014 and 2015.
+
+## Summarizing Accident Data
+
+The summary function `fars_summarize_years` aggregates all accidents across all states per month of the year.
+
+```{r, warning = FALSE}
+fars_summarize_years(years = c("2013","2014","2015"))
+```
+
+## Visualizing Accidents
+
+Suppose we want to visualize the incidents of vehicle accidents for Florida in the year 2014. To do this we need to know the state number of the state we are interested in (in this case 12). The state numbers are based on alphabetical ordering, but you can inspect the raw data files in the `extdata` directory if you are unsure of.
+
+```{r example, warning=FALSE}
+fars_map_state(state.num = 12, year = '2014')
+```
+
+Note that not all state numbers have recorded data, in which case an error is thrown:
+
+```{r invalidstate, error = TRUE}
+fars_map_state(state.num = 3, year = '2014')
+```
+
+It can also be the case that there are errors in the recorded data (longitude and latitude values) such that the accidents cannot be plotted correctly. 
