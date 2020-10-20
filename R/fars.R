@@ -4,7 +4,7 @@
 #'
 #' @param filename A character string specifying the file from which we want to import data.
 #'
-#' @return dataframe A dataframe with the contents specified by the filename, if no such file exists, function will raise an error
+#' @return tibble A tibble with the contents specified by the filename, if no such file exists, function will raise an error
 #'
 #' @examples
 #' \dontrun{fars_read('data.csv')}
@@ -92,10 +92,15 @@ fars_read_years <- function(years) {
 
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
-        dplyr::bind_rows(dat_list) %>%
-                dplyr::group_by(year, MONTH) %>%
-                dplyr::summarize(n = dplyr::n()) %>%
-                tidyr::spread(year, n)
+        tryCatch({
+                dplyr::bind_rows(dat_list) %>%
+                        dplyr::group_by(year, MONTH) %>%
+                        dplyr::summarize(n = dplyr::n()) %>%
+                        tidyr::spread(year, n)
+        }, error = function(e) {
+                warning("no valid years: ", years)
+                return(NULL)
+        })
 }
 
 #' Plots a visualization of the accidents in the given state.
