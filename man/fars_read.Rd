@@ -10,7 +10,7 @@ fars_read(filename)
 \item{filename}{A character string specifying the file from which we want to import data.}
 }
 \value{
-dataframe A dataframe with the contents specified by the filename, if no such file exists, function will raise an error
+tibble A tibble with the contents specified by the filename, if no such file exists, function will raise an error
 }
 \description{
 Helper function for loading FARS data into a dataframe.
