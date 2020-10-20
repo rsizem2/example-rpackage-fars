@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Build
-Status](https://travis-ci.org/rsizem2/example-rpackage-fars.svg?branch=master)](https://travis-ci.org/rsizem2/example-rpackage-fars)
+Status](https://travis-ci.org/rsizem2/example-rpackage-fars.svg?branch=master)](https://travis-ci.org/github/rsizem2/example-rpackage-fars)
 <!-- badges: end -->
 
 The `fars` package provides several functions for analyzing vehicle
