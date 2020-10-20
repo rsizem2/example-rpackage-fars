@@ -46,12 +46,3 @@ fars_map_state(state.num = 21, year = '2015')
 ```
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" />
-
-The state code for Alabama is 1, so the accidents in 2013 can be
-generated with the following code:
-
-``` r
-fars_map_state(1,'2013')
-```
-
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" />
